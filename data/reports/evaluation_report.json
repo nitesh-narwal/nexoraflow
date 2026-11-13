@@ -1,0 +1,402 @@
+{
+  "meta" : {
+    "businessRulesVersion" : "BR-1.0.0",
+    "note" : "Metrics compare engine results with ground_truth.label, which the decision engines never read. 'Detected' = the expected outcome AND the expected reason / evidence were both found. False positives = valid records on which the engine raised an exception (violation code or FLAGGED/ON_HOLD/NEEDS_REVIEW) that was not expected.",
+    "groundTruthRows" : 2119
+  },
+  "totals" : {
+    "recordsGenerated" : {
+      "employee" : 400,
+      "department" : 8,
+      "cost_center" : 45,
+      "employee_cost_center" : 495,
+      "leave_policy" : 6,
+      "expense_policy" : 31,
+      "approval_rule" : 12,
+      "budget" : 504,
+      "employee_policy_assignment" : 746,
+      "leave_balance" : 746,
+      "leave_balance_transaction" : 3880,
+      "leave_request" : 892,
+      "expense_claim" : 1217,
+      "expense_line" : 2599,
+      "receipt" : 2349,
+      "approval_step" : 2169,
+      "reimbursement" : 877,
+      "reimbursement_attempt" : 893,
+      "audit_event" : 17226,
+      "decision_trace" : 2109,
+      "detected_anomaly" : 52,
+      "submission_record" : 2119,
+      "holiday" : 116,
+      "ground_truth_labels" : 2119
+    },
+    "totalRecords" : 39491,
+    "validRecords" : 1872,
+    "invalidRecords" : 247,
+    "unlabelledRequests" : 0
+  },
+  "anomalyDetection" : {
+    "anomaliesLabelled" : 247,
+    "detected" : 247,
+    "undetected" : 0,
+    "falsePositives" : 0,
+    "falseNegatives" : 0,
+    "precision" : 1.0,
+    "recall" : 1.0,
+    "f1" : 1.0,
+    "validRecordsEvaluated" : 1872
+  },
+  "workflowDecisions" : {
+    "evaluated" : 2119,
+    "correctOutcome" : 2119,
+    "incorrectOutcome" : 0,
+    "outcomeAccuracy" : 1.0,
+    "pathEvaluated" : 1922,
+    "correctPath" : 1922,
+    "incorrectPath" : 0,
+    "pathAccuracy" : 1.0,
+    "correctApprovalDecisions" : 2119,
+    "incorrectApprovalDecisions" : 0,
+    "decisionAccuracy" : 1.0
+  },
+  "reimbursementDecisions" : {
+    "evaluated" : 1217,
+    "correct" : 1217,
+    "incorrect" : 0,
+    "accuracy" : 1.0,
+    "claimsWithMoreThanOneReimbursement" : 0
+  },
+  "controls" : {
+    "invalidReimbursementsPrevented" : 16,
+    "duplicateReimbursementAttempts" : 12,
+    "unauthorizedApprovalAttemptsPrevented" : 14,
+    "failedLifecycleTransitions" : 8,
+    "invalidReferencesPreserved" : 34,
+    "submissionsRejectedAtIntake" : 10,
+    "foreignKeyValidationFailures" : 0,
+    "duplicateBusinessIdentifiers" : 0
+  },
+  "scenarios" : [ {
+    "issueType" : "CANCELLED_LEAVE",
+    "anomaly" : false,
+    "total" : 6,
+    "outcomeCorrect" : 6,
+    "reasonOrEvidenceCorrect" : 6,
+    "pathCorrect" : 6,
+    "pathEvaluated" : 6
+  }, {
+    "issueType" : "CLOSED_COST_CENTER",
+    "anomaly" : true,
+    "total" : 2,
+    "outcomeCorrect" : 2,
+    "reasonOrEvidenceCorrect" : 2,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "COMPLETED_APPROVAL_OVERWRITE_ATTEMPT",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 4,
+    "pathEvaluated" : 4
+  }, {
+    "issueType" : "DAILY_LIMIT_EXCEEDED",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "DOCUMENTATION_MISSING",
+    "anomaly" : true,
+    "total" : 5,
+    "outcomeCorrect" : 5,
+    "reasonOrEvidenceCorrect" : 5,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "DUPLICATE_EXPENSE_SUBMISSION",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "DUPLICATE_RECEIPT",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "DUPLICATE_REIMBURSEMENT_ATTEMPT",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 8,
+    "pathEvaluated" : 8
+  }, {
+    "issueType" : "EMPLOYEE_NOT_ELIGIBLE",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "HOLIDAY_OR_NON_WORKING_DAY_ONLY",
+    "anomaly" : true,
+    "total" : 5,
+    "outcomeCorrect" : 5,
+    "reasonOrEvidenceCorrect" : 5,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INACTIVE_APPROVAL_POLICY",
+    "anomaly" : true,
+    "total" : 6,
+    "outcomeCorrect" : 6,
+    "reasonOrEvidenceCorrect" : 6,
+    "pathCorrect" : 6,
+    "pathEvaluated" : 6
+  }, {
+    "issueType" : "INACTIVE_EMPLOYEE",
+    "anomaly" : true,
+    "total" : 10,
+    "outcomeCorrect" : 10,
+    "reasonOrEvidenceCorrect" : 10,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INSUFFICIENT_NOTICE",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INVALID_APPROVAL_HIERARCHY",
+    "anomaly" : true,
+    "total" : 2,
+    "outcomeCorrect" : 2,
+    "reasonOrEvidenceCorrect" : 2,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INVALID_CURRENCY",
+    "anomaly" : true,
+    "total" : 6,
+    "outcomeCorrect" : 6,
+    "reasonOrEvidenceCorrect" : 6,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INVALID_DATE_RANGE",
+    "anomaly" : true,
+    "total" : 12,
+    "outcomeCorrect" : 12,
+    "reasonOrEvidenceCorrect" : 12,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INVALID_EMPLOYEE_REFERENCE",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "INVALID_RECEIPT_REFERENCE",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "MANAGER_UNAVAILABLE",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 8,
+    "pathEvaluated" : 8
+  }, {
+    "issueType" : "MAX_CONSECUTIVE_DAYS_EXCEEDED",
+    "anomaly" : true,
+    "total" : 5,
+    "outcomeCorrect" : 5,
+    "reasonOrEvidenceCorrect" : 5,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "MISSING_COST_CENTER",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "MISSING_RECEIPT",
+    "anomaly" : true,
+    "total" : 15,
+    "outcomeCorrect" : 15,
+    "reasonOrEvidenceCorrect" : 15,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "MONTHLY_BUDGET_EXHAUSTED",
+    "anomaly" : true,
+    "total" : 6,
+    "outcomeCorrect" : 6,
+    "reasonOrEvidenceCorrect" : 6,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "MONTHLY_LIMIT_EXCEEDED",
+    "anomaly" : true,
+    "total" : 3,
+    "outcomeCorrect" : 3,
+    "reasonOrEvidenceCorrect" : 3,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "MULTI_LEVEL_APPROVAL",
+    "anomaly" : false,
+    "total" : 6,
+    "outcomeCorrect" : 6,
+    "reasonOrEvidenceCorrect" : 6,
+    "pathCorrect" : 6,
+    "pathEvaluated" : 6
+  }, {
+    "issueType" : "NEGATIVE_BALANCE",
+    "anomaly" : true,
+    "total" : 12,
+    "outcomeCorrect" : 12,
+    "reasonOrEvidenceCorrect" : 12,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "NONE",
+    "anomaly" : false,
+    "total" : 1844,
+    "outcomeCorrect" : 1844,
+    "reasonOrEvidenceCorrect" : 1844,
+    "pathCorrect" : 1844,
+    "pathEvaluated" : 1844
+  }, {
+    "issueType" : "OUTSIDE_EMPLOYMENT_PERIOD",
+    "anomaly" : true,
+    "total" : 12,
+    "outcomeCorrect" : 12,
+    "reasonOrEvidenceCorrect" : 12,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "OUT_OF_ORDER_APPROVAL_ATTEMPT",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 4,
+    "pathEvaluated" : 4
+  }, {
+    "issueType" : "OVERLAPPING_APPROVED_LEAVE",
+    "anomaly" : true,
+    "total" : 7,
+    "outcomeCorrect" : 7,
+    "reasonOrEvidenceCorrect" : 7,
+    "pathCorrect" : 2,
+    "pathEvaluated" : 2
+  }, {
+    "issueType" : "POLICY_EFFECTIVE_DATE_MISMATCH",
+    "anomaly" : true,
+    "total" : 9,
+    "outcomeCorrect" : 9,
+    "reasonOrEvidenceCorrect" : 9,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "REIMBURSEMENT_BEFORE_APPROVAL",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 4,
+    "pathEvaluated" : 4
+  }, {
+    "issueType" : "SELF_APPROVAL_ATTEMPT",
+    "anomaly" : true,
+    "total" : 10,
+    "outcomeCorrect" : 10,
+    "reasonOrEvidenceCorrect" : 10,
+    "pathCorrect" : 10,
+    "pathEvaluated" : 10
+  }, {
+    "issueType" : "SPLIT_CLAIM_CONTROL",
+    "anomaly" : false,
+    "total" : 16,
+    "outcomeCorrect" : 16,
+    "reasonOrEvidenceCorrect" : 16,
+    "pathCorrect" : 16,
+    "pathEvaluated" : 16
+  }, {
+    "issueType" : "SUSPICIOUS_SPLIT_CLAIM",
+    "anomaly" : true,
+    "total" : 18,
+    "outcomeCorrect" : 18,
+    "reasonOrEvidenceCorrect" : 18,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "TRANSACTION_LIMIT_EXCEEDED",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "UNAUTHORIZED_APPROVAL_ATTEMPT",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 4,
+    "pathEvaluated" : 4
+  }, {
+    "issueType" : "UNAUTHORIZED_COST_CENTER_USAGE",
+    "anomaly" : true,
+    "total" : 8,
+    "outcomeCorrect" : 8,
+    "reasonOrEvidenceCorrect" : 8,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "UNSUPPORTED_CATEGORY",
+    "anomaly" : true,
+    "total" : 2,
+    "outcomeCorrect" : 2,
+    "reasonOrEvidenceCorrect" : 2,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  }, {
+    "issueType" : "UNSUPPORTED_RECEIPT_TYPE",
+    "anomaly" : true,
+    "total" : 4,
+    "outcomeCorrect" : 4,
+    "reasonOrEvidenceCorrect" : 4,
+    "pathCorrect" : 0,
+    "pathEvaluated" : 0
+  } ],
+  "mismatches" : [ ]
+}

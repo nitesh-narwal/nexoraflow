@@ -1,0 +1,7 @@
+[
+  {"currency_code":"EUR","currency_name":"Euro","rate_to_reporting":1.09000000,"rate_effective_from":"2026-01-01","rate_source":"Fixed illustrative rate (documented assumption, not market data)","supported":true},
+  {"currency_code":"GBP","currency_name":"Pound Sterling","rate_to_reporting":1.27000000,"rate_effective_from":"2026-01-01","rate_source":"Fixed illustrative rate (documented assumption, not market data)","supported":true},
+  {"currency_code":"INR","currency_name":"Indian Rupee","rate_to_reporting":0.01200000,"rate_effective_from":"2026-01-01","rate_source":"Fixed illustrative rate (documented assumption, not market data)","supported":true},
+  {"currency_code":"SGD","currency_name":"Singapore Dollar","rate_to_reporting":0.74000000,"rate_effective_from":"2026-01-01","rate_source":"Fixed illustrative rate (documented assumption, not market data)","supported":true},
+  {"currency_code":"USD","currency_name":"US Dollar","rate_to_reporting":1.00000000,"rate_effective_from":"2026-01-01","rate_source":"Fixed illustrative rate (documented assumption, not market data)","supported":true}
+]

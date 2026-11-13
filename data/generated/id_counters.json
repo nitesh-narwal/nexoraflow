@@ -1,0 +1,17 @@
+[
+  {"counter_key":"ANM","next_value":53},
+  {"counter_key":"DEC","next_value":2110},
+  {"counter_key":"ECC","next_value":496},
+  {"counter_key":"EMP","next_value":401},
+  {"counter_key":"EPA","next_value":747},
+  {"counter_key":"EVT","next_value":17227},
+  {"counter_key":"EXP-2026","next_value":1218},
+  {"counter_key":"LBAL","next_value":747},
+  {"counter_key":"LBT","next_value":3881},
+  {"counter_key":"LVE-2026","next_value":893},
+  {"counter_key":"PAY-2026","next_value":586},
+  {"counter_key":"RCP","next_value":2350},
+  {"counter_key":"RMA","next_value":894},
+  {"counter_key":"RMB-2026","next_value":878},
+  {"counter_key":"SUB","next_value":2120}
+]

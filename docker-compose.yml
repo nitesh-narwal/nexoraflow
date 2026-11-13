@@ -1,0 +1,62 @@
+# NexoraFlow: PostgreSQL + application (+ an on-demand pipeline job).
+#
+#   cp .env.example .env              # optional, every variable has a default
+#   docker compose up --build -d      # database + API on http://localhost:8080 (Swagger: /swagger-ui.html)
+#   docker compose --profile tools run --rm pipeline    # generate + validate + evaluate + export (writes ./data and ./docs)
+#
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-nexoraflow}
+      POSTGRES_USER: ${POSTGRES_USER:-nexoraflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-nexoraflow_dev}
+    ports:
+      - "${NEXORA_DB_PORT:-5432}:5432"
+    volumes:
+      - nexoraflow-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build: .
+    image: nexoraflow:1.0.0
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment: &app-env
+      NEXORA_DB_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-nexoraflow}
+      NEXORA_DB_USER: ${POSTGRES_USER:-nexoraflow}
+      NEXORA_DB_PASSWORD: ${POSTGRES_PASSWORD:-nexoraflow_dev}
+      NEXORA_ALLOW_RESET: ${NEXORA_ALLOW_RESET:-true}
+      NEXORAFLOW_GENERATOR_SIZE: ${NEXORA_SIZE:-MEDIUM}
+      NEXORAFLOW_GENERATOR_SEED: ${NEXORA_SEED:-20261022}
+    # Run as the host user so files written to the bind-mounted ./data belong to you (Linux). See .env.example.
+    user: "${NEXORA_UID:-1000}:${NEXORA_GID:-1000}"
+    ports:
+      - "${NEXORA_PORT:-8080}:8080"
+    volumes:
+      - ./data:/app/data
+
+  # One-shot job: the complete deterministic pipeline (reset -> generate -> validate -> evaluate -> export -> reports).
+  pipeline:
+    profiles: ["tools"]
+    build: .
+    image: nexoraflow:1.0.0
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      <<: *app-env
+      NEXORA_COMMAND: ${NEXORA_COMMAND:-full-pipeline}
+      SPRING_MAIN_WEB_APPLICATION_TYPE: none
+    user: "${NEXORA_UID:-1000}:${NEXORA_GID:-1000}"
+    volumes:
+      - ./data:/app/data
+      - ./docs:/app/docs
+
+volumes:
+  nexoraflow-pgdata:

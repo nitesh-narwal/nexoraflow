@@ -1,0 +1,8 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+*.sh text eol=lf
+# generated datasets are data, not source
+data/generated/** linguist-generated=true
+data/ground_truth/** linguist-generated=true
+data/manifests/** linguist-generated=true
+data/reports/** linguist-generated=true

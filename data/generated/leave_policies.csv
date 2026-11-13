@@ -1,0 +1,7 @@
+leave_policy_id,policy_name,leave_type,country,annual_entitlement,accrual_frequency,carry_forward_limit,maximum_consecutive_days,minimum_notice_days,requires_documentation,documentation_threshold_days,eligible_employment_types,effective_from,effective_to,policy_status,created_at,updated_at
+LPOL-ANNUAL-DE,Annual Leave (Germany),ANNUAL,DE,30.00,ANNUAL_UPFRONT,5.00,20,7,false,0,"FULL_TIME,PART_TIME",2025-01-01,,ACTIVE,2026-01-01T00:00:00Z,2026-01-01T00:00:00Z
+LPOL-ANNUAL-GB,Annual Leave (United Kingdom),ANNUAL,GB,25.00,ANNUAL_UPFRONT,5.00,20,7,false,0,"FULL_TIME,PART_TIME",2025-01-01,,ACTIVE,2026-01-01T00:00:00Z,2026-01-01T00:00:00Z
+LPOL-ANNUAL-IN,Annual Leave (India),ANNUAL,IN,18.00,MONTHLY,5.00,15,3,false,0,"FULL_TIME,PART_TIME",2025-01-01,,ACTIVE,2026-01-01T00:00:00Z,2026-01-01T00:00:00Z
+LPOL-ANNUAL-SG,Annual Leave (Singapore),ANNUAL,SG,18.00,ANNUAL_UPFRONT,5.00,15,5,false,0,"FULL_TIME,PART_TIME",2025-01-01,2026-12-31,ACTIVE,2026-01-01T00:00:00Z,2026-01-01T00:00:00Z
+LPOL-ANNUAL-US,Paid Time Off (United States),ANNUAL,US,15.00,ANNUAL_UPFRONT,5.00,15,5,false,0,"FULL_TIME,PART_TIME",2025-01-01,,ACTIVE,2026-01-01T00:00:00Z,2026-01-01T00:00:00Z
+LPOL-SICK,Sick Leave (global),SICK,,10.00,ANNUAL_UPFRONT,0.00,10,0,true,2,"FULL_TIME,PART_TIME,INTERN",2025-01-01,,ACTIVE,2026-01-01T00:00:00Z,2026-01-01T00:00:00Z

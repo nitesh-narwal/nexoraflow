@@ -1,0 +1,576 @@
+{
+  "leave" : {
+    "requestsByStatus" : [ {
+      "status" : "APPROVED",
+      "count" : 630
+    }, {
+      "status" : "CANCELLED",
+      "count" : 48
+    }, {
+      "status" : "FLAGGED",
+      "count" : 7
+    }, {
+      "status" : "NEEDS_REVIEW",
+      "count" : 6
+    }, {
+      "status" : "PENDING_APPROVAL",
+      "count" : 93
+    }, {
+      "status" : "REJECTED",
+      "count" : 108
+    } ],
+    "totals" : {
+      "total_requests" : 892,
+      "approved" : 630,
+      "rejected" : 108,
+      "pending" : 93,
+      "needs_review" : 6,
+      "flagged" : 7,
+      "cancelled" : 48,
+      "insufficient_balance" : 16
+    },
+    "overlappingLeaveIncidents" : 10,
+    "utilizationByDepartment" : [ {
+      "department" : "Customer Success",
+      "used_days" : 118.00,
+      "granted_days" : 807.00,
+      "utilization_percent" : 14.6
+    }, {
+      "department" : "Engineering",
+      "used_days" : 654.00,
+      "granted_days" : 2685.00,
+      "utilization_percent" : 24.4
+    }, {
+      "department" : "Finance",
+      "used_days" : 74.00,
+      "granted_days" : 607.00,
+      "utilization_percent" : 12.2
+    }, {
+      "department" : "Human Resources",
+      "used_days" : 57.00,
+      "granted_days" : 310.50,
+      "utilization_percent" : 18.4
+    }, {
+      "department" : "Marketing",
+      "used_days" : 123.00,
+      "granted_days" : 697.00,
+      "utilization_percent" : 17.6
+    }, {
+      "department" : "Operations",
+      "used_days" : 183.00,
+      "granted_days" : 944.58,
+      "utilization_percent" : 19.4
+    }, {
+      "department" : "Product",
+      "used_days" : 10.00,
+      "granted_days" : 436.00,
+      "utilization_percent" : 2.3
+    }, {
+      "department" : "Sales",
+      "used_days" : 218.00,
+      "granted_days" : 1096.25,
+      "utilization_percent" : 19.9
+    } ],
+    "averageApprovalTimeHours" : 37.5
+  },
+  "expense" : {
+    "claimsByStatus" : [ {
+      "status" : "APPROVED",
+      "count" : 877,
+      "amount_usd" : 525375.49
+    }, {
+      "status" : "FLAGGED",
+      "count" : 65,
+      "amount_usd" : 20952.00
+    }, {
+      "status" : "NEEDS_REVIEW",
+      "count" : 1,
+      "amount_usd" : 30.00
+    }, {
+      "status" : "ON_HOLD",
+      "count" : 16,
+      "amount_usd" : 8605.37
+    }, {
+      "status" : "PENDING_APPROVAL",
+      "count" : 134,
+      "amount_usd" : 47214.29
+    }, {
+      "status" : "REJECTED",
+      "count" : 124,
+      "amount_usd" : 55910.20
+    } ],
+    "totals" : {
+      "total_claims" : 1217,
+      "claimed_usd" : 658087.35,
+      "approved_usd" : 525375.49,
+      "rejected_usd" : 55910.20,
+      "awaiting_approval" : 134,
+      "policy_violations" : 39,
+      "missing_receipts" : 15,
+      "duplicate_receipts" : 8,
+      "suspicious_split_claims" : 18
+    },
+    "distributionByCategory" : [ {
+      "category" : "TRAVEL",
+      "lines" : 455,
+      "amount_usd" : 279074.96
+    }, {
+      "category" : "TRAINING",
+      "lines" : 142,
+      "amount_usd" : 193918.21
+    }, {
+      "category" : "OFFICE_SUPPLIES",
+      "lines" : 375,
+      "amount_usd" : 60508.61
+    }, {
+      "category" : "LODGING",
+      "lines" : 319,
+      "amount_usd" : 55854.98
+    }, {
+      "category" : "MEALS",
+      "lines" : 1182,
+      "amount_usd" : 34923.58
+    }, {
+      "category" : "CLIENT_ENTERTAINMENT",
+      "lines" : 126,
+      "amount_usd" : 33807.01
+    } ],
+    "budgetUtilizationByCostCenter" : [ {
+      "cost_center" : "ENG-GB-01",
+      "currency" : "GBP",
+      "allocated" : 116400.00,
+      "approved_spend" : 40923.57,
+      "pending_commitment" : 3386.63,
+      "approved_utilization_percent" : 35.2
+    }, {
+      "cost_center" : "OPS-GB-01",
+      "currency" : "GBP",
+      "allocated" : 50900.00,
+      "approved_spend" : 15850.39,
+      "pending_commitment" : 1207.10,
+      "approved_utilization_percent" : 31.1
+    }, {
+      "cost_center" : "OPS-DE-01",
+      "currency" : "EUR",
+      "allocated" : 60000.00,
+      "approved_spend" : 17042.26,
+      "pending_commitment" : 622.95,
+      "approved_utilization_percent" : 28.4
+    }, {
+      "cost_center" : "CS-SG-01",
+      "currency" : "SGD",
+      "allocated" : 81600.00,
+      "approved_spend" : 22191.35,
+      "pending_commitment" : 1109.46,
+      "approved_utilization_percent" : 27.2
+    }, {
+      "cost_center" : "CS-IN-01",
+      "currency" : "INR",
+      "allocated" : 6338500.00,
+      "approved_spend" : 1713249.83,
+      "pending_commitment" : 169223.34,
+      "approved_utilization_percent" : 27.0
+    }, {
+      "cost_center" : "ENG-US-01",
+      "currency" : "USD",
+      "allocated" : 145100.00,
+      "approved_spend" : 38189.00,
+      "pending_commitment" : 908.00,
+      "approved_utilization_percent" : 26.3
+    }, {
+      "cost_center" : "ENG-DE-01",
+      "currency" : "EUR",
+      "allocated" : 92500.00,
+      "approved_spend" : 23619.28,
+      "pending_commitment" : 3809.19,
+      "approved_utilization_percent" : 25.5
+    }, {
+      "cost_center" : "SAL-US-01",
+      "currency" : "USD",
+      "allocated" : 288400.00,
+      "approved_spend" : 63040.00,
+      "pending_commitment" : 4240.00,
+      "approved_utilization_percent" : 21.9
+    }, {
+      "cost_center" : "ENG-SG-01",
+      "currency" : "SGD",
+      "allocated" : 137400.00,
+      "approved_spend" : 29381.11,
+      "pending_commitment" : 1772.98,
+      "approved_utilization_percent" : 21.4
+    }, {
+      "cost_center" : "MKT-DE-01",
+      "currency" : "EUR",
+      "allocated" : 55200.00,
+      "approved_spend" : 11575.41,
+      "pending_commitment" : 792.65,
+      "approved_utilization_percent" : 21.0
+    }, {
+      "cost_center" : "ENG-IN-01",
+      "currency" : "INR",
+      "allocated" : 17902000.00,
+      "approved_spend" : 3522676.70,
+      "pending_commitment" : 282583.35,
+      "approved_utilization_percent" : 19.7
+    }, {
+      "cost_center" : "MKT-US-01",
+      "currency" : "USD",
+      "allocated" : 61000.00,
+      "approved_spend" : 8512.00,
+      "pending_commitment" : 1830.00,
+      "approved_utilization_percent" : 14.0
+    }, {
+      "cost_center" : "SAL-IN-01",
+      "currency" : "INR",
+      "allocated" : 33481800.00,
+      "approved_spend" : 4594003.32,
+      "pending_commitment" : 937166.66,
+      "approved_utilization_percent" : 13.7
+    }, {
+      "cost_center" : "OPS-IN-01",
+      "currency" : "INR",
+      "allocated" : 5000400.00,
+      "approved_spend" : 530343.32,
+      "pending_commitment" : 139083.33,
+      "approved_utilization_percent" : 10.6
+    }, {
+      "cost_center" : "MKT-GB-01",
+      "currency" : "GBP",
+      "allocated" : 46800.00,
+      "approved_spend" : 4921.27,
+      "pending_commitment" : 0.00,
+      "approved_utilization_percent" : 10.5
+    }, {
+      "cost_center" : "CS-US-01",
+      "currency" : "USD",
+      "allocated" : 60000.00,
+      "approved_spend" : 6077.56,
+      "pending_commitment" : 978.52,
+      "approved_utilization_percent" : 10.1
+    }, {
+      "cost_center" : "MKT-IN-01",
+      "currency" : "INR",
+      "allocated" : 5000400.00,
+      "approved_spend" : 454166.66,
+      "pending_commitment" : 0.00,
+      "approved_utilization_percent" : 9.1
+    }, {
+      "cost_center" : "HR-US-01",
+      "currency" : "USD",
+      "allocated" : 60000.00,
+      "approved_spend" : 5125.00,
+      "pending_commitment" : 0.00,
+      "approved_utilization_percent" : 8.5
+    }, {
+      "cost_center" : "FIN-IN-01",
+      "currency" : "INR",
+      "allocated" : 5000400.00,
+      "approved_spend" : 367130.00,
+      "pending_commitment" : 29083.33,
+      "approved_utilization_percent" : 7.3
+    }, {
+      "cost_center" : "FIN-GB-01",
+      "currency" : "GBP",
+      "allocated" : 46800.00,
+      "approved_spend" : 2526.77,
+      "pending_commitment" : 351.98,
+      "approved_utilization_percent" : 5.4
+    }, {
+      "cost_center" : "CS-DE-01",
+      "currency" : "EUR",
+      "allocated" : 55200.00,
+      "approved_spend" : 2932.12,
+      "pending_commitment" : 1814.69,
+      "approved_utilization_percent" : 5.3
+    }, {
+      "cost_center" : "SAL-DE-01",
+      "currency" : "EUR",
+      "allocated" : 55200.00,
+      "approved_spend" : 2418.34,
+      "pending_commitment" : 0.00,
+      "approved_utilization_percent" : 4.4
+    }, {
+      "cost_center" : "OPS-SG-01",
+      "currency" : "SGD",
+      "allocated" : 81600.00,
+      "approved_spend" : 3316.22,
+      "pending_commitment" : 477.03,
+      "approved_utilization_percent" : 4.1
+    }, {
+      "cost_center" : "SPL-03",
+      "currency" : "USD",
+      "allocated" : 553000.00,
+      "approved_spend" : 20395.53,
+      "pending_commitment" : 0.00,
+      "approved_utilization_percent" : 3.7
+    }, {
+      "cost_center" : "SPL-01",
+      "currency" : "USD",
+      "allocated" : 553000.00,
+      "approved_spend" : 15540.00,
+      "pending_commitment" : 0.00,
+      "approved_utilization_percent" : 2.8
+    } ]
+  },
+  "approvals" : {
+    "stepsByStatus" : [ {
+      "status" : "APPROVED",
+      "count" : 1738
+    }, {
+      "status" : "CANCELLED",
+      "count" : 52
+    }, {
+      "status" : "PENDING",
+      "count" : 227
+    }, {
+      "status" : "REJECTED",
+      "count" : 138
+    }, {
+      "status" : "SKIPPED",
+      "count" : 3
+    }, {
+      "status" : "WAITING",
+      "count" : 11
+    } ],
+    "totals" : {
+      "approval_steps" : 2169,
+      "pending_approvals" : 227,
+      "rejected_approvals" : 138,
+      "average_approval_time_hours" : 37.6
+    },
+    "multiLevelApproval" : {
+      "multi_level_requests" : 234,
+      "routed_requests" : 1932,
+      "multi_level_percent" : 12.1
+    },
+    "unauthorizedApprovalAttempts" : 14,
+    "attemptsByReason" : [ {
+      "reason" : "SELF_APPROVAL_NOT_ALLOWED",
+      "count" : 10
+    }, {
+      "reason" : "INVALID_STEP_ORDER",
+      "count" : 4
+    }, {
+      "reason" : "STEP_ALREADY_COMPLETED",
+      "count" : 4
+    }, {
+      "reason" : "UNAUTHORIZED_APPROVER",
+      "count" : 4
+    } ],
+    "escalations" : 8
+  },
+  "financial" : {
+    "reimbursements" : [ {
+      "status" : "PAID",
+      "count" : 585,
+      "amount_usd" : 328940.05
+    }, {
+      "status" : "PENDING_PAYMENT",
+      "count" : 292,
+      "amount_usd" : 196435.44
+    } ],
+    "totals" : {
+      "eligible_reimbursement_usd" : 525375.49,
+      "pending_reimbursement_usd" : 196435.44,
+      "processed_reimbursement_usd" : 328940.05
+    },
+    "reimbursementAttempts" : [ {
+      "outcome" : "CREATED",
+      "count" : 877
+    }, {
+      "outcome" : "DUPLICATE_REJECTED",
+      "count" : 12
+    }, {
+      "outcome" : "NOT_ELIGIBLE_REJECTED",
+      "count" : 4
+    } ],
+    "duplicateReimbursementAttempts" : 12,
+    "budgetConsumption" : {
+      "allocated_usd" : 7481549.60,
+      "approved_spend_usd" : 525375.49,
+      "utilization_percent" : 7.02
+    }
+  },
+  "exceptions" : {
+    "openExceptions" : [ {
+      "entity_type" : "EXPENSE_CLAIM",
+      "status" : "FLAGGED",
+      "count" : 65
+    }, {
+      "entity_type" : "EXPENSE_CLAIM",
+      "status" : "NEEDS_REVIEW",
+      "count" : 1
+    }, {
+      "entity_type" : "EXPENSE_CLAIM",
+      "status" : "ON_HOLD",
+      "count" : 16
+    }, {
+      "entity_type" : "LEAVE_REQUEST",
+      "status" : "FLAGGED",
+      "count" : 7
+    }, {
+      "entity_type" : "LEAVE_REQUEST",
+      "status" : "NEEDS_REVIEW",
+      "count" : 6
+    } ],
+    "decisionsByReasonCode" : [ {
+      "code" : "REJECTED_BY_APPROVER",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 75
+    }, {
+      "code" : "REJECTED_BY_APPROVER",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 63
+    }, {
+      "code" : "CANCELLED_BY_REQUESTER",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 48
+    }, {
+      "code" : "SUSPICIOUS_SPLIT_CLAIM",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 18
+    }, {
+      "code" : "INSUFFICIENT_BALANCE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 16
+    }, {
+      "code" : "POLICY_LIMIT_EXCEEDED",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 15
+    }, {
+      "code" : "RECEIPT_MISSING",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 15
+    }, {
+      "code" : "OUTSIDE_EMPLOYMENT_PERIOD",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 12
+    }, {
+      "code" : "INVALID_COST_CENTER",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 10
+    }, {
+      "code" : "OVERLAPPING_APPROVED_LEAVE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 10
+    }, {
+      "code" : "DUPLICATE_RECEIPT",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 8
+    }, {
+      "code" : "DUPLICATE_SUBMISSION",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 8
+    }, {
+      "code" : "INSUFFICIENT_BUDGET",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 8
+    }, {
+      "code" : "UNAUTHORIZED_COST_CENTER",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 8
+    }, {
+      "code" : "INACTIVE_EMPLOYEE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 6
+    }, {
+      "code" : "INVALID_CURRENCY",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 6
+    }, {
+      "code" : "INVALID_DATE_RANGE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 6
+    }, {
+      "code" : "INVALID_DATE_RANGE",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 6
+    }, {
+      "code" : "POLICY_NOT_EFFECTIVE",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 6
+    }, {
+      "code" : "DOCUMENTATION_MISSING",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 5
+    }, {
+      "code" : "EMPLOYEE_NOT_ELIGIBLE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 5
+    }, {
+      "code" : "HOLIDAY_OR_NON_WORKING_DAY_ONLY",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 5
+    }, {
+      "code" : "POLICY_LIMIT_EXCEEDED",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 5
+    }, {
+      "code" : "INACTIVE_EMPLOYEE",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 4
+    }, {
+      "code" : "INSUFFICIENT_NOTICE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 4
+    }, {
+      "code" : "INVALID_RECEIPT_REFERENCE",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 4
+    }, {
+      "code" : "RECEIPT_INVALID",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 4
+    }, {
+      "code" : "POLICY_NOT_EFFECTIVE",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 3
+    }, {
+      "code" : "NO_VALID_APPROVER",
+      "entity_type" : "LEAVE_REQUEST",
+      "count" : 1
+    }, {
+      "code" : "NO_VALID_APPROVER",
+      "entity_type" : "EXPENSE_CLAIM",
+      "count" : 1
+    } ],
+    "detectedAnomaliesByType" : [ {
+      "anomaly_type" : "SUSPICIOUS_SPLIT_CLAIM",
+      "severity" : "HIGH",
+      "count" : 18
+    }, {
+      "anomaly_type" : "OVERLAPPING_APPROVED_LEAVE",
+      "severity" : "HIGH",
+      "count" : 10
+    }, {
+      "anomaly_type" : "DUPLICATE_RECEIPT",
+      "severity" : "HIGH",
+      "count" : 8
+    }, {
+      "anomaly_type" : "DUPLICATE_SUBMISSION",
+      "severity" : "MEDIUM",
+      "count" : 8
+    }, {
+      "anomaly_type" : "UNAUTHORIZED_COST_CENTER",
+      "severity" : "MEDIUM",
+      "count" : 8
+    } ],
+    "submissionsPreserved" : [ {
+      "request_type" : "EXPENSE",
+      "intake_status" : "ACCEPTED_WITH_ERRORS",
+      "count" : 18
+    }, {
+      "request_type" : "EXPENSE",
+      "intake_status" : "REJECTED_AT_INTAKE",
+      "count" : 6
+    }, {
+      "request_type" : "LEAVE",
+      "intake_status" : "ACCEPTED_WITH_ERRORS",
+      "count" : 6
+    }, {
+      "request_type" : "LEAVE",
+      "intake_status" : "REJECTED_AT_INTAKE",
+      "count" : 4
+    } ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "dataset" : {
+    "name" : "NexoraFlow synthetic dataset",
+    "company" : "Nexora Technologies (fictional)",
+    "datasetVersion" : "1.0.0+seed20261022.medium",
+    "containsRealPersonalData" : false
+  },
+  "generation" : {
+    "seed" : 20261022,
+    "sizeProfile" : "MEDIUM",
+    "targetEmployees" : 400,
+    "targetLeaveRequests" : 800,
+    "targetExpenseClaims" : 1000,
+    "referenceDate" : "2026-10-22",
+    "applicationVersion" : "1.0.0",
+    "businessRulesVersion" : "BR-1.0.0",
+    "fakerLibrary" : "net.datafaker:datafaker",
+    "javaVersion" : 21
+  },
+  "operationalMetadata" : {
+    "generatedAtWallClock" : "2026-11-12T20:09:20.584606620Z",
+    "note" : "Wall-clock metadata only. It is excluded from every checksum; all dataset timestamps come from the seeded simulation clock."
+  },
+  "rowCounts" : {
+    "id_counter" : 15,
+    "currency" : 5,
+    "country" : 5,
+    "department" : 8,
+    "employee" : 400,
+    "cost_center" : 45,
+    "employee_cost_center" : 495,
+    "holiday_calendar" : 15,
+    "holiday" : 116,
+    "leave_policy" : 6,
+    "expense_policy" : 31,
+    "approval_rule" : 12,
+    "budget" : 504,
+    "employee_policy_assignment" : 746,
+    "leave_balance" : 746,
+    "leave_request" : 892,
+    "leave_balance_transaction" : 3880,
+    "receipt" : 2349,
+    "expense_claim" : 1217,
+    "expense_line" : 2599,
+    "submission_record" : 2119,
+    "approval_step" : 2169,
+    "reimbursement" : 877,
+    "reimbursement_attempt" : 893,
+    "detected_anomaly" : 52,
+    "decision_trace" : 2109,
+    "audit_event" : 17226,
+    "ground_truth.label" : 2119
+  },
+  "logicalChecksums" : {
+    "id_counter" : {
+      "sha256" : "25186d7b043da1109cefda815f7b619090e383a0d79977e646169e32c685273c",
+      "rows" : 15
+    },
+    "currency" : {
+      "sha256" : "301dc809a4e9bcd480da5c72ca3ffe67de492a32bfc23bfac15a7477be801653",
+      "rows" : 5
+    },
+    "country" : {
+      "sha256" : "596147ca0404e2ee8822d4c403a60eeacc766d2f11a0c0645f9145e8f26dc96c",
+      "rows" : 5
+    },
+    "department" : {
+      "sha256" : "233ab7435dfa09e816a44812db373f77530881dd58c0b89d4fec98b0b0cc5991",
+      "rows" : 8
+    },
+    "employee" : {
+      "sha256" : "602e49ed781d6f52a12d541defdd09797c951703bca0468b6a957870afb922b9",
+      "rows" : 400
+    },
+    "cost_center" : {
+      "sha256" : "a9beba1ca9bb191282490e248cfa12c86fec82af366842785551e6f96472e21a",
+      "rows" : 45
+    },
+    "employee_cost_center" : {
+      "sha256" : "9d78a77e574c85bea5db60b84189dee8cfb9b09bf31dbb84ec5e2ad457a4d059",
+      "rows" : 495
+    },
+    "holiday_calendar" : {
+      "sha256" : "49f7bb621ac1dbc67b02e9b5299085452cd97c7d61024b73aab9e79baa552523",
+      "rows" : 15
+    },
+    "holiday" : {
+      "sha256" : "11faa6a06baa9ac173fdb90ef2d56621ccbdfecc8a8daba3dbcd619c6097db1e",
+      "rows" : 116
+    },
+    "leave_policy" : {
+      "sha256" : "6122819decdb0c60308fc58c5b2b525d34a8cd154eabbfca91a1f44c14d79549",
+      "rows" : 6
+    },
+    "expense_policy" : {
+      "sha256" : "e53b228abf7cfcbc4aee88011152607b43c477db70a092a82f03d8ccfa1dd84b",
+      "rows" : 31
+    },
+    "approval_rule" : {
+      "sha256" : "bea00e8c10a5aa1f244028d85c4a2cab941b63cb5a89f9db5a639428c1d1807b",
+      "rows" : 12
+    },
+    "budget" : {
+      "sha256" : "9cbc36ea2528c4af034752d1762f04db42777da7a17c75a3c226f4b2b512b19d",
+      "rows" : 504
+    },
+    "employee_policy_assignment" : {
+      "sha256" : "c1e9360a5eb47c1e7efee864c1d56cf3d1c41648844d8848b7946f40b5990e61",
+      "rows" : 746
+    },
+    "leave_balance" : {
+      "sha256" : "dd48d3ac2ed4d20dd273439f86c9383af0c55442519d1a5777ae791a2fbc8bae",
+      "rows" : 746
+    },
+    "leave_request" : {
+      "sha256" : "b707a7799675dd6058fc8bf484e442af9e26437688b9279ee63c375ad1631824",
+      "rows" : 892
+    },
+    "leave_balance_transaction" : {
+      "sha256" : "4aee11852bf175e9a2001bbd6cc311d75520b1d887946b23ac63a97afc70c2c9",
+      "rows" : 3880
+    },
+    "receipt" : {
+      "sha256" : "db37addfd910bfffdd011f9ab82efaf948437f18abfabee2afd1dd0a77cb5eb4",
+      "rows" : 2349
+    },
+    "expense_claim" : {
+      "sha256" : "4acee559bcfa10462e1b81ebd25c81772ad20f3cffee27fb168f1ae86545bbf4",
+      "rows" : 1217
+    },
+    "expense_line" : {
+      "sha256" : "46dc2ec50632f205d2e90562508a26b09fb059070951c8a75e6b57af07e6a770",
+      "rows" : 2599
+    },
+    "submission_record" : {
+      "sha256" : "7ac6654135734c635b130c538c24cd635198a08a5542ffb54b496c1a1f84bba5",
+      "rows" : 2119
+    },
+    "approval_step" : {
+      "sha256" : "a38ea55014637feb0d9702afe2369020483b4684b13d4dba91088be7646e674f",
+      "rows" : 2169
+    },
+    "reimbursement" : {
+      "sha256" : "0f715d49f4d108bed0096d742699a284301f77201533a5823b5e6d627de74246",
+      "rows" : 877
+    },
+    "reimbursement_attempt" : {
+      "sha256" : "b3c35bed15d3f0c963a3e5bfac8dea3386ac3d808e7e2e4595eaddb8e345cd02",
+      "rows" : 893
+    },
+    "detected_anomaly" : {
+      "sha256" : "ddcc1da8883145f94862a70a8fa01cd3712f087f5943e6d535a031d23b0bfdef",
+      "rows" : 52
+    },
+    "decision_trace" : {
+      "sha256" : "fbab6c2d6100366f39a2a362f2a3cea92d2c771fa26104e4b8347df273528e93",
+      "rows" : 2109
+    },
+    "audit_event" : {
+      "sha256" : "4d73e1adf1e4fd89216d63b41e05eefe140bd4affbf42da6f2f5993196fae8a1",
+      "rows" : 17226
+    },
+    "ground_truth.label" : {
+      "sha256" : "13b323c22fd17cd961ebb1b83f683b930b4a5d0376c4e5918743eec527ac7cec",
+      "rows" : 2119
+    }
+  },
+  "overallLogicalChecksum" : "d88f798469546a74306ed0d04ea3d3d71a9290b037318ab8de3e46e23e8991b5"
+}

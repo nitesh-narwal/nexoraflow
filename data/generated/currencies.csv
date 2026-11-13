@@ -1,0 +1,6 @@
+currency_code,currency_name,rate_to_reporting,rate_effective_from,rate_source,supported
+EUR,Euro,1.09000000,2026-01-01,"Fixed illustrative rate (documented assumption, not market data)",true
+GBP,Pound Sterling,1.27000000,2026-01-01,"Fixed illustrative rate (documented assumption, not market data)",true
+INR,Indian Rupee,0.01200000,2026-01-01,"Fixed illustrative rate (documented assumption, not market data)",true
+SGD,Singapore Dollar,0.74000000,2026-01-01,"Fixed illustrative rate (documented assumption, not market data)",true
+USD,US Dollar,1.00000000,2026-01-01,"Fixed illustrative rate (documented assumption, not market data)",true

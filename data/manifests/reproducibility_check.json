@@ -1,0 +1,182 @@
+{
+  "seed" : 20261022,
+  "sizeProfile" : "MEDIUM",
+  "referenceDate" : "2026-10-22",
+  "businessRulesVersion" : "BR-1.0.0",
+  "runs" : 2,
+  "identical" : true,
+  "overallChecksumRun1" : "d88f798469546a74306ed0d04ea3d3d71a9290b037318ab8de3e46e23e8991b5",
+  "overallChecksumRun2" : "d88f798469546a74306ed0d04ea3d3d71a9290b037318ab8de3e46e23e8991b5",
+  "tables" : {
+    "id_counter" : {
+      "rows" : 15,
+      "match" : true,
+      "sha256Run2" : "25186d7b043da1109cefda815f7b619090e383a0d79977e646169e32c685273c",
+      "sha256Run1" : "25186d7b043da1109cefda815f7b619090e383a0d79977e646169e32c685273c"
+    },
+    "currency" : {
+      "rows" : 5,
+      "match" : true,
+      "sha256Run2" : "301dc809a4e9bcd480da5c72ca3ffe67de492a32bfc23bfac15a7477be801653",
+      "sha256Run1" : "301dc809a4e9bcd480da5c72ca3ffe67de492a32bfc23bfac15a7477be801653"
+    },
+    "country" : {
+      "rows" : 5,
+      "match" : true,
+      "sha256Run2" : "596147ca0404e2ee8822d4c403a60eeacc766d2f11a0c0645f9145e8f26dc96c",
+      "sha256Run1" : "596147ca0404e2ee8822d4c403a60eeacc766d2f11a0c0645f9145e8f26dc96c"
+    },
+    "department" : {
+      "rows" : 8,
+      "match" : true,
+      "sha256Run2" : "233ab7435dfa09e816a44812db373f77530881dd58c0b89d4fec98b0b0cc5991",
+      "sha256Run1" : "233ab7435dfa09e816a44812db373f77530881dd58c0b89d4fec98b0b0cc5991"
+    },
+    "employee" : {
+      "rows" : 400,
+      "match" : true,
+      "sha256Run2" : "602e49ed781d6f52a12d541defdd09797c951703bca0468b6a957870afb922b9",
+      "sha256Run1" : "602e49ed781d6f52a12d541defdd09797c951703bca0468b6a957870afb922b9"
+    },
+    "cost_center" : {
+      "rows" : 45,
+      "match" : true,
+      "sha256Run2" : "a9beba1ca9bb191282490e248cfa12c86fec82af366842785551e6f96472e21a",
+      "sha256Run1" : "a9beba1ca9bb191282490e248cfa12c86fec82af366842785551e6f96472e21a"
+    },
+    "employee_cost_center" : {
+      "rows" : 495,
+      "match" : true,
+      "sha256Run2" : "9d78a77e574c85bea5db60b84189dee8cfb9b09bf31dbb84ec5e2ad457a4d059",
+      "sha256Run1" : "9d78a77e574c85bea5db60b84189dee8cfb9b09bf31dbb84ec5e2ad457a4d059"
+    },
+    "holiday_calendar" : {
+      "rows" : 15,
+      "match" : true,
+      "sha256Run2" : "49f7bb621ac1dbc67b02e9b5299085452cd97c7d61024b73aab9e79baa552523",
+      "sha256Run1" : "49f7bb621ac1dbc67b02e9b5299085452cd97c7d61024b73aab9e79baa552523"
+    },
+    "holiday" : {
+      "rows" : 116,
+      "match" : true,
+      "sha256Run2" : "11faa6a06baa9ac173fdb90ef2d56621ccbdfecc8a8daba3dbcd619c6097db1e",
+      "sha256Run1" : "11faa6a06baa9ac173fdb90ef2d56621ccbdfecc8a8daba3dbcd619c6097db1e"
+    },
+    "leave_policy" : {
+      "rows" : 6,
+      "match" : true,
+      "sha256Run2" : "6122819decdb0c60308fc58c5b2b525d34a8cd154eabbfca91a1f44c14d79549",
+      "sha256Run1" : "6122819decdb0c60308fc58c5b2b525d34a8cd154eabbfca91a1f44c14d79549"
+    },
+    "expense_policy" : {
+      "rows" : 31,
+      "match" : true,
+      "sha256Run2" : "e53b228abf7cfcbc4aee88011152607b43c477db70a092a82f03d8ccfa1dd84b",
+      "sha256Run1" : "e53b228abf7cfcbc4aee88011152607b43c477db70a092a82f03d8ccfa1dd84b"
+    },
+    "approval_rule" : {
+      "rows" : 12,
+      "match" : true,
+      "sha256Run2" : "bea00e8c10a5aa1f244028d85c4a2cab941b63cb5a89f9db5a639428c1d1807b",
+      "sha256Run1" : "bea00e8c10a5aa1f244028d85c4a2cab941b63cb5a89f9db5a639428c1d1807b"
+    },
+    "budget" : {
+      "rows" : 504,
+      "match" : true,
+      "sha256Run2" : "9cbc36ea2528c4af034752d1762f04db42777da7a17c75a3c226f4b2b512b19d",
+      "sha256Run1" : "9cbc36ea2528c4af034752d1762f04db42777da7a17c75a3c226f4b2b512b19d"
+    },
+    "employee_policy_assignment" : {
+      "rows" : 746,
+      "match" : true,
+      "sha256Run2" : "c1e9360a5eb47c1e7efee864c1d56cf3d1c41648844d8848b7946f40b5990e61",
+      "sha256Run1" : "c1e9360a5eb47c1e7efee864c1d56cf3d1c41648844d8848b7946f40b5990e61"
+    },
+    "leave_balance" : {
+      "rows" : 746,
+      "match" : true,
+      "sha256Run2" : "dd48d3ac2ed4d20dd273439f86c9383af0c55442519d1a5777ae791a2fbc8bae",
+      "sha256Run1" : "dd48d3ac2ed4d20dd273439f86c9383af0c55442519d1a5777ae791a2fbc8bae"
+    },
+    "leave_request" : {
+      "rows" : 892,
+      "match" : true,
+      "sha256Run2" : "b707a7799675dd6058fc8bf484e442af9e26437688b9279ee63c375ad1631824",
+      "sha256Run1" : "b707a7799675dd6058fc8bf484e442af9e26437688b9279ee63c375ad1631824"
+    },
+    "leave_balance_transaction" : {
+      "rows" : 3880,
+      "match" : true,
+      "sha256Run2" : "4aee11852bf175e9a2001bbd6cc311d75520b1d887946b23ac63a97afc70c2c9",
+      "sha256Run1" : "4aee11852bf175e9a2001bbd6cc311d75520b1d887946b23ac63a97afc70c2c9"
+    },
+    "receipt" : {
+      "rows" : 2349,
+      "match" : true,
+      "sha256Run2" : "db37addfd910bfffdd011f9ab82efaf948437f18abfabee2afd1dd0a77cb5eb4",
+      "sha256Run1" : "db37addfd910bfffdd011f9ab82efaf948437f18abfabee2afd1dd0a77cb5eb4"
+    },
+    "expense_claim" : {
+      "rows" : 1217,
+      "match" : true,
+      "sha256Run2" : "4acee559bcfa10462e1b81ebd25c81772ad20f3cffee27fb168f1ae86545bbf4",
+      "sha256Run1" : "4acee559bcfa10462e1b81ebd25c81772ad20f3cffee27fb168f1ae86545bbf4"
+    },
+    "expense_line" : {
+      "rows" : 2599,
+      "match" : true,
+      "sha256Run2" : "46dc2ec50632f205d2e90562508a26b09fb059070951c8a75e6b57af07e6a770",
+      "sha256Run1" : "46dc2ec50632f205d2e90562508a26b09fb059070951c8a75e6b57af07e6a770"
+    },
+    "submission_record" : {
+      "rows" : 2119,
+      "match" : true,
+      "sha256Run2" : "7ac6654135734c635b130c538c24cd635198a08a5542ffb54b496c1a1f84bba5",
+      "sha256Run1" : "7ac6654135734c635b130c538c24cd635198a08a5542ffb54b496c1a1f84bba5"
+    },
+    "approval_step" : {
+      "rows" : 2169,
+      "match" : true,
+      "sha256Run2" : "a38ea55014637feb0d9702afe2369020483b4684b13d4dba91088be7646e674f",
+      "sha256Run1" : "a38ea55014637feb0d9702afe2369020483b4684b13d4dba91088be7646e674f"
+    },
+    "reimbursement" : {
+      "rows" : 877,
+      "match" : true,
+      "sha256Run2" : "0f715d49f4d108bed0096d742699a284301f77201533a5823b5e6d627de74246",
+      "sha256Run1" : "0f715d49f4d108bed0096d742699a284301f77201533a5823b5e6d627de74246"
+    },
+    "reimbursement_attempt" : {
+      "rows" : 893,
+      "match" : true,
+      "sha256Run2" : "b3c35bed15d3f0c963a3e5bfac8dea3386ac3d808e7e2e4595eaddb8e345cd02",
+      "sha256Run1" : "b3c35bed15d3f0c963a3e5bfac8dea3386ac3d808e7e2e4595eaddb8e345cd02"
+    },
+    "detected_anomaly" : {
+      "rows" : 52,
+      "match" : true,
+      "sha256Run2" : "ddcc1da8883145f94862a70a8fa01cd3712f087f5943e6d535a031d23b0bfdef",
+      "sha256Run1" : "ddcc1da8883145f94862a70a8fa01cd3712f087f5943e6d535a031d23b0bfdef"
+    },
+    "decision_trace" : {
+      "rows" : 2109,
+      "match" : true,
+      "sha256Run2" : "fbab6c2d6100366f39a2a362f2a3cea92d2c771fa26104e4b8347df273528e93",
+      "sha256Run1" : "fbab6c2d6100366f39a2a362f2a3cea92d2c771fa26104e4b8347df273528e93"
+    },
+    "audit_event" : {
+      "rows" : 17226,
+      "match" : true,
+      "sha256Run2" : "4d73e1adf1e4fd89216d63b41e05eefe140bd4affbf42da6f2f5993196fae8a1",
+      "sha256Run1" : "4d73e1adf1e4fd89216d63b41e05eefe140bd4affbf42da6f2f5993196fae8a1"
+    },
+    "ground_truth.label" : {
+      "rows" : 2119,
+      "match" : true,
+      "sha256Run2" : "13b323c22fd17cd961ebb1b83f683b930b4a5d0376c4e5918743eec527ac7cec",
+      "sha256Run1" : "13b323c22fd17cd961ebb1b83f683b930b4a5d0376c4e5918743eec527ac7cec"
+    }
+  },
+  "differences" : [ ],
+  "checkedAtWallClock" : "2026-11-12T20:11:16.373733078Z"
+}

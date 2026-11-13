@@ -1,0 +1,234 @@
+{
+  "algorithm" : "SHA-256",
+  "files" : {
+    "generated/id_counters.csv" : {
+      "sha256" : "b748accbf659247ff9f73774b2144af555e52b9301554be0cae8decb122f170d",
+      "bytes" : 170
+    },
+    "generated/id_counters.json" : {
+      "sha256" : "8e56fb9fd08e98505838458f0932502b6ede1d462483a1333751c47aa3eda644",
+      "bytes" : 660
+    },
+    "generated/currencies.csv" : {
+      "sha256" : "39726718d6e0b25433c21c1727cdb188b8d0b488f80a030fbc23d15ab967d951",
+      "bytes" : 638
+    },
+    "generated/currencies.json" : {
+      "sha256" : "2321f3e8b0f92fb81c40e12f01c8892b1f6a8103d4679a9551603b4fca2a2fdc",
+      "bytes" : 1108
+    },
+    "generated/countries.csv" : {
+      "sha256" : "5f03a083c5f639a46f7007c04ea9ea1bc4c527c3b2f1171b2bfddece56ca4867",
+      "bytes" : 128
+    },
+    "generated/countries.json" : {
+      "sha256" : "778c2a44deb04428d70f3971f7808171a7172531fd6b29ca38c0257966e5fa2a",
+      "bytes" : 376
+    },
+    "generated/departments.csv" : {
+      "sha256" : "2eb68ef477b8b84e871bbf460bce429c9d2c97f49ba6fa3674fff75787472526",
+      "bytes" : 706
+    },
+    "generated/departments.json" : {
+      "sha256" : "5ef84cdffcc347df057675a606622c52ef9667b67e1481a7cc592db8a083fd4e",
+      "bytes" : 1473
+    },
+    "generated/employees.csv" : {
+      "sha256" : "ec8dc8484270e39065745078b067f71dee34107b608cf53e907c6898556771a1",
+      "bytes" : 85941
+    },
+    "generated/employees.json" : {
+      "sha256" : "da5e48d3e3a598c9ed86592214c968a5c067c71177eeb5de1801838556613c2d",
+      "bytes" : 194998
+    },
+    "generated/cost_centers.csv" : {
+      "sha256" : "c5b52ea105575f90c954a456a290496bad2ae6829bbd01a0deeebe6eafb4b9d5",
+      "bytes" : 5173
+    },
+    "generated/cost_centers.json" : {
+      "sha256" : "c7fbd11e6fd632f61dafb17177b03508a79bf459706ff78f7c1f3293f91b21d5",
+      "bytes" : 12125
+    },
+    "generated/employee_cost_centers.csv" : {
+      "sha256" : "4061b002eab524cce2cc98250542e6627b2af6b90ba571ffe353dac86efd8628",
+      "bytes" : 35519
+    },
+    "generated/employee_cost_centers.json" : {
+      "sha256" : "3d0c969106e076dc4ff46d7b9d366e6d4363779bbd32bd19fabc070737f883b1",
+      "bytes" : 90569
+    },
+    "generated/holiday_calendars.csv" : {
+      "sha256" : "2e53b058ae6417eca8ebe6b26d2c9837220cd66571a2b75e3fd10e4a15750d4c",
+      "bytes" : 807
+    },
+    "generated/holiday_calendars.json" : {
+      "sha256" : "a604e437d0d2e6c984ed5b2357ee7e57e9b7b4b04347b9b1d9631cb0dae9213f",
+      "bytes" : 1767
+    },
+    "generated/holidays.csv" : {
+      "sha256" : "0a1779490dc9a425a1322394c5b89607f4b9c60aac16fe6633c5a2ea7fa7ea0c",
+      "bytes" : 6904
+    },
+    "generated/holidays.json" : {
+      "sha256" : "d89fa783e535d25c8376fbcd8e7292177b600d3f7fc76c1f2cc2096b1dac8f04",
+      "bytes" : 16937
+    },
+    "generated/leave_policies.csv" : {
+      "sha256" : "d7f4ce11e9f4c0683b301759fc30f6e4ad6817b365875cfbfe364bc0fed0bd11",
+      "bytes" : 1322
+    },
+    "generated/leave_policies.json" : {
+      "sha256" : "c79cf61fd0fcc7169bd9993b921db25dc2ff69d09e8db14f1ae2e4520ca69c9c",
+      "bytes" : 3031
+    },
+    "generated/expense_policies.csv" : {
+      "sha256" : "844cb21429401a0394356e1bc4f20d9b54ae315323b825a3e10fcf33c7fcc994",
+      "bytes" : 5447
+    },
+    "generated/expense_policies.json" : {
+      "sha256" : "63bd0efe798ed8781e6ac81c95f29385ed14f1aef821cb29fb3bb9968b2fb7e0",
+      "bytes" : 14929
+    },
+    "generated/approval_rules.csv" : {
+      "sha256" : "613c13f0e68c2309fe9eb9250c3be91699160635e945b5be94bb3b52342be49d",
+      "bytes" : 2192
+    },
+    "generated/approval_rules.json" : {
+      "sha256" : "01a54dc6486e66a8fb0ffa2ee84cb2a563c1d9739128674665391cdb5555fa26",
+      "bytes" : 4604
+    },
+    "generated/budgets.csv" : {
+      "sha256" : "a60b9be9f7e2d42febeef81343d1a8c130ae3a649c62ab1419d7a1574e6d69f5",
+      "bytes" : 61496
+    },
+    "generated/budgets.json" : {
+      "sha256" : "e84e5cd3b491b11dbf0ed665e3a5234916e436944c079c7a4e6627a8dfbb6a06",
+      "bytes" : 149064
+    },
+    "generated/employee_policy_assignments.csv" : {
+      "sha256" : "b29d744d1d2779b35bef2013b3baadfd23b3909723d3c4f6b13649bce63db68b",
+      "bytes" : 50486
+    },
+    "generated/employee_policy_assignments.json" : {
+      "sha256" : "c948788dc434e5b053d0070df87ac0fa3b87b82a0725a5984cedfe0e7d2bdde5",
+      "bytes" : 119184
+    },
+    "generated/leave_balances.csv" : {
+      "sha256" : "7dc19ae3d33a46f8a0396385461eca2ac4ec2acf68f7958ad8ef9699f4ca0598",
+      "bytes" : 67066
+    },
+    "generated/leave_balances.json" : {
+      "sha256" : "78ed82299c358325080e30891948d7352e7d56ca0529282c484c17b6c8ac6fa3",
+      "bytes" : 217594
+    },
+    "generated/leave_requests.csv" : {
+      "sha256" : "5d334dfa5bd6db50fc7b1cfc3ee64c44b5ec83fcfff96efb832f423b65698060",
+      "bytes" : 172416
+    },
+    "generated/leave_requests.json" : {
+      "sha256" : "2636bede4c906bef8a58b89c051f92a1e8802bbc82d839d3902b7ec34ce8d175",
+      "bytes" : 402856
+    },
+    "generated/leave_balance_transactions.csv" : {
+      "sha256" : "c30f7ebe95fafda37a3058917925d0e68ad72109e71f77e81fc1b6e290b2853b",
+      "bytes" : 554165
+    },
+    "generated/leave_balance_transactions.json" : {
+      "sha256" : "1c5dacfb1ca1c5219ba6e2d71077cc73c24c938f54a40b18614992a64a2ed307",
+      "bytes" : 1321212
+    },
+    "generated/receipts.csv" : {
+      "sha256" : "57425f7c34aed1f572e6aabe94a23c96db8ed8137ae730cb4059fd5e0308f0d8",
+      "bytes" : 374421
+    },
+    "generated/receipts.json" : {
+      "sha256" : "3a4cdf81ce90424b852270d1c664820f837bab8ef3220a8b656d0e45b1b0cab0",
+      "bytes" : 738403
+    },
+    "generated/expense_claims.csv" : {
+      "sha256" : "8567e4dda7ba4b1366a467e4801178a9cb5c35c9dfd8f4f2198153be1a8a4330",
+      "bytes" : 240177
+    },
+    "generated/expense_claims.json" : {
+      "sha256" : "bfccb26c2ebabe9990eb5d7316a95108ffcee0a7d34d6d92d1e20f93692b144b",
+      "bytes" : 625384
+    },
+    "generated/expense_lines.csv" : {
+      "sha256" : "b31534b6b0e1116c2a339093c4b2b590de34297355d77fa9a0b0bceb35d9f474",
+      "bytes" : 409547
+    },
+    "generated/expense_lines.json" : {
+      "sha256" : "467172e735ea42346ba007e9d9f6b8ccd0cbd2c982f6bea467748225924b4139",
+      "bytes" : 1049158
+    },
+    "generated/submission_records.csv" : {
+      "sha256" : "5baa0b7fe731265cbd53f09593aea7afcc48529c798394aca2ec63db79847143",
+      "bytes" : 1573186
+    },
+    "generated/submission_records.json" : {
+      "sha256" : "8cf00561d1824834e54be5637af9a3ee419aea92f76dbcbd8595fd4398212d6b",
+      "bytes" : 1612547
+    },
+    "generated/approval_steps.csv" : {
+      "sha256" : "25d90e51d26cb3bf4e66918d1a86554d389efe814a92b80e40cc5c61cbb5540c",
+      "bytes" : 462419
+    },
+    "generated/approval_steps.json" : {
+      "sha256" : "8aeb463824a373c6b72758b714e876d2591d6398d4786729cb205eadbff245c3",
+      "bytes" : 1060354
+    },
+    "generated/reimbursements.csv" : {
+      "sha256" : "1f2a278869a581dc33ccfe4dcf2cfa8c9a129cd9dfeef4ef89c1f703abefba1d",
+      "bytes" : 134824
+    },
+    "generated/reimbursements.json" : {
+      "sha256" : "343c7f19e1d76512e0360127a0d87adecd53070f469ef27aa56be433d1006306",
+      "bytes" : 310368
+    },
+    "generated/reimbursement_attempts.csv" : {
+      "sha256" : "02966f847fb7c1d96d17928407ec57af0b0e7223a5b36359a3bac8900f3bd8d9",
+      "bytes" : 95849
+    },
+    "generated/reimbursement_attempts.json" : {
+      "sha256" : "c0d61a2452d30f3d2e4b2845ee32fa80d5501d8f61ff42f4706be3d09c35a07b",
+      "bytes" : 202196
+    },
+    "generated/detected_anomalies.csv" : {
+      "sha256" : "558858852e0bac098cb0e87a1918ebefc1010459b711c9abd4241b157e95b535",
+      "bytes" : 11056
+    },
+    "generated/detected_anomalies.json" : {
+      "sha256" : "f499abb94c4c138c36e33274735374538b211971a710c18410e98ac9b9173cf4",
+      "bytes" : 19147
+    },
+    "generated/decision_traces.csv" : {
+      "sha256" : "b7303709dc5b9b2007b269013f3138ee22f36e43ed3062a5c3da97a224981bab",
+      "bytes" : 8406552
+    },
+    "generated/decision_traces.json" : {
+      "sha256" : "28c0b25cbccbb9862efe4fce60ba71350e82c447f4933126a76da6e9991fe50a",
+      "bytes" : 7252966
+    },
+    "generated/audit_events.csv" : {
+      "sha256" : "fb05f3255d03d4180393470bd8df622cf9eedb8768ea186c6ae6e0f9e797a7cc",
+      "bytes" : 3636940
+    },
+    "generated/audit_events.json" : {
+      "sha256" : "cedc6a2863fbe55ea8ace1e15fcb8ad8af46b9600aa1f33572fd8be10b37d8e6",
+      "bytes" : 5992385
+    },
+    "ground_truth/ground_truth.csv" : {
+      "sha256" : "0d49120ea33ab2b3e2260fe495792e28f96cda377e50b31c9eceac6534386711",
+      "bytes" : 494519
+    },
+    "ground_truth/ground_truth.json" : {
+      "sha256" : "c2fb710c9b3ac02e3b2cb4a21919d29132eb981733b87365f155e390a84fd185",
+      "bytes" : 982757
+    },
+    "generated/sql/nexoraflow_seed.sql" : {
+      "sha256" : "2ab9161ab3351f1cef76550ec49ce5200554a7150ac92499d449ff10a2cf21ee",
+      "bytes" : 18258742
+    }
+  },
+  "overallLogicalChecksum" : "d88f798469546a74306ed0d04ea3d3d71a9290b037318ab8de3e46e23e8991b5"
+}

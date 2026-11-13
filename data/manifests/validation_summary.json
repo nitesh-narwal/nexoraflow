@@ -1,0 +1,336 @@
+{
+  "summary" : {
+    "checks" : 25,
+    "passed" : 24,
+    "failed" : 0,
+    "informational" : 1,
+    "totalFindings" : 0,
+    "allPassed" : true
+  },
+  "checks" : [ {
+    "id" : "DI-01",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Primary-key uniqueness",
+    "description" : "Every table has unique primary keys (business identifiers).",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DI-02",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Foreign-key integrity",
+    "description" : "Every foreign key references an existing parent record.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DI-03",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Business identifier format",
+    "description" : "IDs follow the documented conventions (EMP-000001, LVE-2026-000001, ...).",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DI-04",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Unique business attributes",
+    "description" : "Employee e-mail, cost-center code and payment reference are unique.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DI-05",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Required fields",
+    "description" : "Core descriptive fields are present and not blank.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DI-06",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Valid enum values",
+    "description" : "Status / type columns only contain values of the application enums.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DI-07",
+    "category" : "DATABASE_INTEGRITY",
+    "name" : "Valid date ranges",
+    "description" : "Start <= end for employment, policies, assignments, budgets and canonical requests.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-01",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Claim total equals the sum of its lines",
+    "description" : "total_amount = sum of positive line amounts.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-02",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Leave balances reconcile with the ledger",
+    "description" : "Each balance component equals the sum of its ledger deltas; available = opening + accrued + carried - used - pending.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-03",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Approved leave consumes balance exactly once",
+    "description" : "Every APPROVED request has exactly one CONSUME and a net used amount equal to its business days.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-04",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Rejected / cancelled / unapproved leave does not consume balance",
+    "description" : "Non-approved requests have no net used days; only pending requests hold a reservation.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-05",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Approval routes follow configured thresholds",
+    "description" : "The levels and roles of every approval route equal those prescribed by the active approval rules.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-06",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Approval actors possess authority",
+    "description" : "Actors were active, are not the requester, and hold the role's authority and reporting-line relationship.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-07",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Reimbursement only for eligible, finally approved claims",
+    "description" : "Every reimbursement belongs to an APPROVED + ELIGIBLE claim with all steps complete and matching amount; every APPROVED claim has one.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-08",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Duplicate reimbursement prevented",
+    "description" : "At most one reimbursement per claim; rejected duplicate attempts are recorded.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-09",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Budget consumption reconciles with approved expenses",
+    "description" : "Approved spend per budget equals the sum of reimbursements and never exceeds the allocation.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "BI-10",
+    "category" : "BUSINESS_INTEGRITY",
+    "name" : "Lifecycle transitions are valid",
+    "description" : "Audit trails replay as valid, continuous state-machine paths ending in the current state.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-01",
+    "category" : "DATA_QUALITY",
+    "name" : "Valid organisational hierarchy",
+    "description" : "One root, no cycles, no self-management, managers rank above reports.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-02",
+    "category" : "DATA_QUALITY",
+    "name" : "No unexplained negative amounts",
+    "description" : "Negative / zero amounts exist only on explicitly INVALID lines.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-03",
+    "category" : "DATA_QUALITY",
+    "name" : "Valid employment dates",
+    "description" : "Termination date only for TERMINATED employees and never before joining.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-04",
+    "category" : "DATA_QUALITY",
+    "name" : "Consistent currencies",
+    "description" : "Line, claim, reimbursement, policy and budget currencies agree (explained INVALID_CURRENCY claims excepted).",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-05",
+    "category" : "DATA_QUALITY",
+    "name" : "No unexpected duplicate receipts",
+    "description" : "A receipt hash reused by live claims is always explained by a detected DUPLICATE_RECEIPT anomaly.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-06",
+    "category" : "DATA_QUALITY",
+    "name" : "No overlapping approved leave",
+    "description" : "Detects corrupted canonical data: two APPROVED requests of one employee that overlap.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-07",
+    "category" : "DATA_QUALITY",
+    "name" : "Canonical records never carry invalid references",
+    "description" : "Claims without a cost center only exist in non-live states and keep the submitted value.",
+    "severity" : "ERROR",
+    "status" : "PASS",
+    "findingCount" : 0,
+    "findings" : [ ]
+  }, {
+    "id" : "DQ-08",
+    "category" : "DATA_QUALITY",
+    "name" : "Deliberately invalid submissions preserved (informational)",
+    "description" : "Submissions with invalid references or inverted dates are kept in staging / as rejected records - this is expected, not corruption.",
+    "severity" : "INFO",
+    "status" : "INFO",
+    "findingCount" : 48,
+    "findings" : [ {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002108",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-910000\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-001994",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: end date before start date\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002053",
+      "message" : "REJECTED_AT_INTAKE: [\"UNSUPPORTED_CATEGORY: 'GAMBLING' (line 1)\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-001953",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_RECEIPT_REFERENCE: receipt 'RCP-990000' not found (line 1)\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002072",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-900002\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002074",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-900001\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-001981",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: expense period end before start\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-001995",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: expense period end before start\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002001",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: expense period end before start\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002014",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_COST_CENTER: unknown cost center 'CC-9902' preserved, not linked\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002015",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-910003\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002017",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: end date before start date\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002023",
+      "message" : "REJECTED_AT_INTAKE: [\"UNSUPPORTED_CATEGORY: 'GAMBLING' (line 1)\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002024",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-900003\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002027",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_COST_CENTER: cost center missing\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002037",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_RECEIPT_REFERENCE: receipt 'RCP-990002' not found (line 1)\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002049",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_COST_CENTER: cost center missing\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002057",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-900000\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002058",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: end date before start date\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002065",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_COST_CENTER: cost center missing\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002066",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_RECEIPT_REFERENCE: receipt 'RCP-990001' not found (line 1)\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002067",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: expense period end before start\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002069",
+      "message" : "REJECTED_AT_INTAKE: [\"EMPLOYEE_NOT_FOUND: EMP-910002\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002082",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_COST_CENTER: cost center missing\"]"
+    }, {
+      "entityType" : "SUBMISSION",
+      "entityId" : "SUB-002083",
+      "message" : "ACCEPTED_WITH_ERRORS: [\"INVALID_DATE_RANGE: end date before start date\"]"
+    } ]
+  } ]
+}

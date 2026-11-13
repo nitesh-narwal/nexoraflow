@@ -1,0 +1,10 @@
+target/
+.git/
+.idea/
+.claude/
+graphify-out/
+data/
+docs/
+*.md
+HELP.md
+CLAUDE.md

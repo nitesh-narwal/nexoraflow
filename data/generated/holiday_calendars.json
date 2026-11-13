@@ -1,0 +1,17 @@
+[
+  {"calendar_id":"HC-DE-2025","country":"DE","calendar_year":2025,"calendar_name":"Germany public holidays 2025"},
+  {"calendar_id":"HC-DE-2026","country":"DE","calendar_year":2026,"calendar_name":"Germany public holidays 2026"},
+  {"calendar_id":"HC-DE-2027","country":"DE","calendar_year":2027,"calendar_name":"Germany public holidays 2027"},
+  {"calendar_id":"HC-GB-2025","country":"GB","calendar_year":2025,"calendar_name":"United Kingdom public holidays 2025"},
+  {"calendar_id":"HC-GB-2026","country":"GB","calendar_year":2026,"calendar_name":"United Kingdom public holidays 2026"},
+  {"calendar_id":"HC-GB-2027","country":"GB","calendar_year":2027,"calendar_name":"United Kingdom public holidays 2027"},
+  {"calendar_id":"HC-IN-2025","country":"IN","calendar_year":2025,"calendar_name":"India public holidays 2025"},
+  {"calendar_id":"HC-IN-2026","country":"IN","calendar_year":2026,"calendar_name":"India public holidays 2026"},
+  {"calendar_id":"HC-IN-2027","country":"IN","calendar_year":2027,"calendar_name":"India public holidays 2027"},
+  {"calendar_id":"HC-SG-2025","country":"SG","calendar_year":2025,"calendar_name":"Singapore public holidays 2025"},
+  {"calendar_id":"HC-SG-2026","country":"SG","calendar_year":2026,"calendar_name":"Singapore public holidays 2026"},
+  {"calendar_id":"HC-SG-2027","country":"SG","calendar_year":2027,"calendar_name":"Singapore public holidays 2027"},
+  {"calendar_id":"HC-US-2025","country":"US","calendar_year":2025,"calendar_name":"United States public holidays 2025"},
+  {"calendar_id":"HC-US-2026","country":"US","calendar_year":2026,"calendar_name":"United States public holidays 2026"},
+  {"calendar_id":"HC-US-2027","country":"US","calendar_year":2027,"calendar_name":"United States public holidays 2027"}
+]
