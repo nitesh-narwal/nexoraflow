@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl \
     && useradd --system --uid 10001 --create-home nexora
 WORKDIR /app
 COPY --from=build /workspace/app.jar /app/app.jar
-RUN mkdir -p /app/data /app/docs && chown -R nexora:nexora /app
+RUN mkdir -p /app/data/docs /app/docs && chown -R nexora:nexora /app
 USER nexora
 ENV JAVA_TOOL_OPTIONS="-XX:MaxRAMPercentage=75 -Duser.timezone=UTC" \
     NEXORA_DATA_DIR=/app/data \

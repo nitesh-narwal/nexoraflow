@@ -2,7 +2,12 @@
 #
 #   cp .env.example .env              # optional, every variable has a default
 #   docker compose up --build -d      # database + API on http://localhost:8080 (Swagger: /swagger-ui.html)
-#   docker compose --profile tools run --rm pipeline    # generate + validate + evaluate + export (writes ./data and ./docs)
+#   docker compose --profile tools run --rm pipeline    # generate + validate + evaluate + export, prints the summary
+#   scripts/full-pipeline-docker.sh   # the same, then copies the files into ./data and ./docs/validation-report.md
+#
+# No host folder is mounted. Exports live in the named volume "nexoraflow-data". That keeps the stack working with Docker
+# Desktop (it only allows mounts from shared folders and otherwise fails with "mounts denied"), with a checkout on any path,
+# and without file-ownership problems.
 #
 services:
   postgres:
@@ -34,12 +39,10 @@ services:
       NEXORA_ALLOW_RESET: ${NEXORA_ALLOW_RESET:-true}
       NEXORAFLOW_GENERATOR_SIZE: ${NEXORA_SIZE:-MEDIUM}
       NEXORAFLOW_GENERATOR_SEED: ${NEXORA_SEED:-20261022}
-    # Run as the host user so files written to the bind-mounted ./data belong to you (Linux). See .env.example.
-    user: "${NEXORA_UID:-1000}:${NEXORA_GID:-1000}"
     ports:
       - "${NEXORA_PORT:-8080}:8080"
     volumes:
-      - ./data:/app/data
+      - nexoraflow-data:/app/data
 
   # One-shot job: the complete deterministic pipeline (reset -> generate -> validate -> evaluate -> export -> reports).
   pipeline:
@@ -52,11 +55,12 @@ services:
     environment:
       <<: *app-env
       NEXORA_COMMAND: ${NEXORA_COMMAND:-full-pipeline}
+      NEXORA_DOCS_DIR: /app/data/docs
       SPRING_MAIN_WEB_APPLICATION_TYPE: none
-    user: "${NEXORA_UID:-1000}:${NEXORA_GID:-1000}"
     volumes:
-      - ./data:/app/data
-      - ./docs:/app/docs
+      - nexoraflow-data:/app/data
 
 volumes:
   nexoraflow-pgdata:
+  nexoraflow-data:
+    name: nexoraflow-data

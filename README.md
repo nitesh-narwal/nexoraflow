@@ -12,9 +12,11 @@ Java 21 · Spring Boot 4 · PostgreSQL 16 · Flyway · Docker
 
 ```bash
 docker compose up --build -d                        # PostgreSQL + the API  ->  http://localhost:8080/swagger-ui.html
-docker compose --profile tools run --rm pipeline    # generate the dataset, validate, evaluate, export (about a minute)
+docker compose --profile tools run --rm pipeline    # generate the dataset, validate, evaluate, export (about a minute, prints the summary)
 ./mvnw verify                                       # unit + integration + acceptance tests (Docker must be running)
 ```
+
+The pipeline's files stay in a Docker volume. `scripts/full-pipeline-docker.sh` runs the same job and copies them into `data/` and `docs/validation-report.md`. No host folder is mounted, so this works with Docker Desktop and with the project on any path.
 
 Details, the no-Docker path and troubleshooting are in sections 6-14 below.
 
@@ -522,7 +524,7 @@ flowchart LR
         APP[nexoraflow app<br/>Spring Boot, non-root, health check] -->|JDBC| PG[(postgres:16-alpine<br/>volume nexoraflow-pgdata)]
         PIPE[pipeline job<br/>profile tools<br/>NEXORA_COMMAND=full-pipeline] -->|JDBC| PG
     end
-    PIPE -->|writes| DATA[./data and ./docs/validation-report.md<br/>bind mounts]
+    PIPE -->|writes| DATA[volume nexoraflow-data<br/>copy out: scripts/full-pipeline-docker.sh]
 ```
 
 ### 5.13 Design decisions
@@ -605,7 +607,7 @@ The default credentials (`nexoraflow` / `nexoraflow_dev`) are **development defa
 | `NEXORA_ALLOW_RESET` | `true` | whether the generator may reset the database (`false` forbids generation through the API) |
 | `NEXORA_COMMAND` | empty | CLI mode: run a pipeline command and exit |
 
-Compose variables (copy `.env.example` to `.env`): `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, `NEXORA_DB_PORT` (host port of the database), `NEXORA_PORT`, `NEXORA_SIZE` (`SMALL`/`MEDIUM`/`LARGE`), `NEXORA_SEED`, `NEXORA_COMMAND`, `NEXORA_UID` / `NEXORA_GID` (Linux: run the containers as your user so files written to `./data` are yours).
+Compose variables (copy `.env.example` to `.env`): `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, `NEXORA_DB_PORT` (host port of the database), `NEXORA_PORT`, `NEXORA_SIZE` (`SMALL`/`MEDIUM`/`LARGE`), `NEXORA_SEED`, `NEXORA_COMMAND`.
 
 Application properties (`application.yml`): `nexoraflow.generator.seed` (default `20261022`), `.size` (`MEDIUM`), `.reference-date` (`2026-10-22`), `nexoraflow.expense.max-lines-per-claim` (10), `.split-window-days` (3), `.supported-receipt-types`, `.max-receipt-size-bytes`.
 
@@ -636,7 +638,8 @@ The anomaly scenarios are **added on top** of the baseline volume (section 12).
 ```bash
 scripts/full-pipeline.sh                       # MEDIUM, default seed (needs the database from section 8)
 scripts/full-pipeline.sh SMALL 42              # profile and seed
-docker compose --profile tools run --rm pipeline          # same, fully in Docker
+docker compose --profile tools run --rm pipeline          # same, fully in Docker (files stay in the nexoraflow-data volume)
+scripts/full-pipeline-docker.sh                           # same, and copies them into ./data and ./docs/validation-report.md
 ```
 
 **Single commands** (each is a separate JVM run against the same database):
@@ -707,7 +710,7 @@ The rule-to-test mapping is in [docs/business-rules.md](docs/business-rules.md#9
 
 ## 15. Exporting datasets
 
-`full-pipeline` and `export` write the dataset to `data/` (default `NEXORA_DATA_DIR`):
+`full-pipeline` and `export` write the dataset to `data/` (default `NEXORA_DATA_DIR`). In Docker that is the `nexoraflow-data` volume; `scripts/full-pipeline-docker.sh` runs the pipeline and copies the files to `./data` (and the report to `./docs/validation-report.md`):
 
 ```
 data/generated/<entity>.csv|json      one pair per table (employees, departments, cost_centers, leave_policies, expense_policies,
@@ -1058,7 +1061,8 @@ README.md · PROMPTS.md · Dockerfile · docker-compose.yml · .env.example · p
 |---|---|
 | `Could not find a valid Docker environment` in tests | start Docker; if the CLI uses a stopped Docker Desktop context: `export DOCKER_HOST=unix:///var/run/docker.sock` |
 | `Connection refused` on 5432 | the database is not running (`scripts/dev-db.sh` or `docker compose up -d postgres`); port taken: `scripts/dev-db.sh 5433` and `export NEXORA_DB_URL=jdbc:postgresql://localhost:5433/nexoraflow` |
-| `permission denied` writing `./data` from the Compose pipeline (Linux) | set `NEXORA_UID=$(id -u)` and `NEXORA_GID=$(id -g)` in `.env` |
+| `mounts denied: The path ... is not shared from the host` (Docker Desktop) | Docker Desktop only mounts shared folders. The current `docker-compose.yml` mounts no host folder; if you still see this you are using an older copy of it. Alternatives: share the folder (Docker Desktop, Settings, Resources, File sharing) or use the native engine (`docker context use default`) |
+| Images, containers or volumes seem to be missing | Docker Desktop and the native engine are separate engines with separate stores. Check `docker context ls` and stay on one |
 | `Generation is disabled` (403) | `NEXORA_ALLOW_RESET=true` |
 | `A generation run is already in progress` (409) | wait for `GET /api/v1/generator/status` to report `COMPLETED` |
 | Java version errors | JDK 21 is required (`java -version`) |

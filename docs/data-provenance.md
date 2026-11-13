@@ -150,7 +150,7 @@ What was verified (executed, not assumed):
 | Host run vs. Docker run (MEDIUM) | identical per-table checksums |
 | `reproducibility-check` in Docker (MEDIUM, 2 runs) | `identical: true`, no differences, overall checksum above |
 
-Re-create it: `scripts/full-pipeline.sh` (or `docker compose --profile tools run --rm pipeline`) and compare `overallLogicalChecksum` in `data/manifests/generation_manifest.json` with the value in section 1.
+Re-create it: `scripts/full-pipeline.sh` (or `scripts/full-pipeline-docker.sh`) and compare `overallLogicalChecksum` in `data/manifests/generation_manifest.json` with the value in section 1.
 
 ## 7. Files
 

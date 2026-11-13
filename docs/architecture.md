@@ -165,14 +165,16 @@ flowchart LR
         APP[nexoraflow app<br/>Spring Boot, non-root, health check] -->|JDBC| PG[(postgres:16-alpine<br/>volume nexoraflow-pgdata)]
         PIPE[pipeline job<br/>profile tools<br/>NEXORA_COMMAND=full-pipeline] -->|JDBC| PG
     end
-    PIPE -->|writes| DATA[./data and ./docs/validation-report.md<br/>bind mounts]
+    PIPE -->|writes| DATA[volume nexoraflow-data<br/>copy out: scripts/full-pipeline-docker.sh]
 ```
 
 | Service | Purpose |
 |---|---|
 | `postgres` | PostgreSQL 16 with a health check; data in a named volume |
 | `app` | the REST API on port 8080 (`/swagger-ui.html`, `/v3/api-docs`, `/actuator/health`) |
-| `pipeline` (profile `tools`) | one-shot job: reset -> generate -> validate -> evaluate -> export -> reports; set `NEXORA_COMMAND` to run a single stage |
+| `pipeline` (profile `tools`) | one-shot job: reset -> generate -> validate -> evaluate -> export -> reports; set `NEXORA_COMMAND` to run a single stage. Exports go to the named volume `nexoraflow-data`; `scripts/full-pipeline-docker.sh` copies them to `./data` and `./docs/validation-report.md` |
+
+No host folder is mounted: Docker Desktop only allows mounts from shared folders (anything else fails with `mounts denied`), and bind mounts bring file-ownership problems on Linux. A named volume works everywhere, and the files are copied out with `docker cp`.
 
 The same commands run without Docker through `scripts/nexoraflow.sh` (Maven `spring-boot:run` with `--nexoraflow.cli.command=<command>`).
 
